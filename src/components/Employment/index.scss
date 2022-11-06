@@ -1,0 +1,17 @@
+@import "../../variables";
+
+.employment {
+  .history {
+    p {
+      margin: 0;
+    }
+    .divider {
+      position: relative;
+      padding-top: 1px;
+      background-color: $content-color;
+      display: inline-block;
+      width: 20px;
+      top: -4px;
+    }
+  }
+}

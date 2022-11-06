@@ -1,16 +1,30 @@
 @import "../_variables.scss";
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif-family;
+}
+p,
+span,
+a,
+article,
+strong {
+  font-family: $sans-serif-family;
+  color: $content-color;
+}
 .header {
   background-color: $header-background-color;
   text-align: center;
   h1 {
-    font-family: $serif-family;
     margin: 0;
     margin-top: 1rem;
     font-size: 2.2em;
   }
   p {
-    font-family: $sans-serif-family;
     text-transform: uppercase;
     word-spacing: 2px;
     letter-spacing: 1px;
