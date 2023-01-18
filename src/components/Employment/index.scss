@@ -2,6 +2,9 @@
 
 .employment {
   .history {
+    &:not(:first-of-type) {
+      margin-top: 1.5em;
+    }
     p {
       margin: 0;
     }
@@ -12,6 +15,11 @@
       display: inline-block;
       width: 20px;
       top: -4px;
+    }
+  }
+  .history-sublisting {
+    li {
+      list-style-type: disc;
     }
   }
 }

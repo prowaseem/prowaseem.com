@@ -2,7 +2,9 @@ import { Row, Col, Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import MyImage from "../../assets/m-waseem.jpg";
+import profile from "../data/profile.json";
 import "./index.scss";
 
 function Header(): JSX.Element {
@@ -10,23 +12,29 @@ function Header(): JSX.Element {
     <Row className="header justify-content-center">
       <Col md="6" className="mt-5">
         <Image src={MyImage} roundedCircle fluid title="My Profile Picture" />
-        <h1>Muhammad Waseem Irshad</h1>
-        <p>Lead Software Engineer</p>
+        <h1>{profile.fullName}</h1>
+        <p>{profile.location}</p>
       </Col>
       <hr />
-      <Col md="6">
-        <Row className="subheader justify-content-between">
+      <Col md="7">
+        <Row className="subheader justify-content-center">
           <p>
             <FontAwesomeIcon icon={faEnvelope} />
-            <a href="mailto:theprowaseem@gmail.com">theprowaseem@gmail.com</a>
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faGithub} />
+            <a href={profile.githubURL} target="_blank" rel="noreferrer">
+              {profile.github}
+            </a>
           </p>
           <p>
             <FontAwesomeIcon icon={faLocationDot} />
-            <span>Karachi, Pakistan</span>
+            <span>{profile.location}</span>
           </p>
           <p>
             <FontAwesomeIcon icon={faPhone} />
-            <span>+923158305202</span>
+            <span>{profile.contact}</span>
           </p>
         </Row>
       </Col>
