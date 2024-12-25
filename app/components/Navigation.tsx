@@ -1,25 +1,25 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { Link as ScrollLink } from 'react-scroll'
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navigation = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <motion.nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -29,12 +29,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="text-xl font-bold text-gray-800">
-              John Doe
+              Muhammad Waseem
             </Link>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {['About', 'Bio', 'Experience', 'Portfolio', 'Contact'].map((item) => (
+              {/* {['About', 'Bio', 'Experience', 'Portfolio', 'Contact'].map((item) => ( */}
+              {["About", "Bio", "Experience", "Contact"].map((item) => (
                 <ScrollLink
                   key={item}
                   to={item.toLowerCase()}
@@ -50,8 +51,7 @@ const Navigation = () => {
         </div>
       </div>
     </motion.nav>
-  )
-}
+  );
+};
 
-export default Navigation
-
+export default Navigation;

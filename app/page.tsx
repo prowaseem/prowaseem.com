@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
-import { Element } from 'react-scroll'
-import Navigation from './components/Navigation'
-import Hero from './components/Hero'
-import Bio from './components/Bio'
-import EmploymentHistory from './components/EmploymentHistory'
-import Portfolio from './components/Portfolio'
-import Contact from './components/Contact'
+import { Element } from "react-scroll";
+import Navigation from "./components/Navigation";
+import Hero from "./components/Hero";
+import Bio from "./components/Bio";
+import EmploymentHistory from "./components/EmploymentHistory";
+// import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
@@ -21,13 +21,12 @@ export default function Home() {
       <Element name="experience">
         <EmploymentHistory />
       </Element>
-      <Element name="portfolio">
+      {/* <Element name="portfolio">
         <Portfolio />
-      </Element>
+      </Element> */}
       <Element name="contact">
         <Contact />
       </Element>
     </main>
-  )
+  );
 }
-

@@ -5,22 +5,22 @@ import { useInView } from 'react-intersection-observer'
 
 const jobs = [
   {
-    title: 'Senior Software Engineer',
-    company: 'Tech Innovators Inc.',
-    period: '2020 - Present',
+    title: 'Lead Software Engineer',
+    company: 'Venturedive Pvt. Ltd.',
+    period: '2017 - Present',
     description: 'Leading development of scalable web applications using React and Node.js. Implementing CI/CD pipelines and mentoring junior developers.',
   },
   {
-    title: 'Software Engineer',
-    company: 'Digital Solutions Ltd.',
-    period: '2017 - 2020',
-    description: 'Developed and maintained multiple client projects using Angular and Express.js. Collaborated with cross-functional teams to deliver high-quality software solutions.',
+    title: 'Senior Web Application Developer',
+    company: 'Invision Custom Solutions',
+    period: '2016 - 2017',
+    description: 'Developed and maintained multiple client projects using PHP, Laravel and React.js. Collaborated with cross-functional teams to deliver high-quality software solutions.',
   },
   {
-    title: 'Junior Developer',
-    company: 'StartUp Ventures',
-    period: '2015 - 2017',
-    description: 'Assisted in the development of a social media analytics platform. Gained experience in full-stack development and agile methodologies.',
+    title: 'Junior Software Engineer',
+    company: 'Skylinx Technologies',
+    period: '2016 - 2016',
+    description: 'Worked on small-scale web applications using PHP and MySQL. Developed RESTful APIs and integrated third-party services.',
   },
 ]
 

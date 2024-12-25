@@ -1,16 +1,19 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Bio = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   return (
-    <section id="bio" className="py-16 bg-gradient-to-r from-blue-100 to-purple-100">
+    <section
+      id="bio"
+      className="py-16 bg-gradient-to-r from-blue-100 to-purple-100"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           className="text-3xl font-bold text-center mb-8 font-montserrat"
@@ -30,8 +33,10 @@ const Bio = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Education</h3>
             <p className="text-gray-600 mb-4">
-              I graduated with a Bachelor's degree in Computer Science from XYZ University in 2015.
-              During my time there, I developed a strong foundation in algorithms, data structures, and software engineering principles.
+              I graduated with a Bachelor&apos;s degree in Software Engineering
+              from Government College University Faisalabad in 2015. During my
+              time there, I developed a strong foundation in algorithms, data
+              structures, and software engineering principles.
             </p>
           </div>
           <div>
@@ -47,8 +52,7 @@ const Bio = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Bio
-
+export default Bio;
