@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Link as ScrollLink } from "react-scroll";
+import ProfileImage from "@/app/assets/m-waseem.jpg";
 
 const Hero = () => {
   return (
@@ -47,7 +48,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Image
-            src="/assets/m-waseem.jpg"
+            src={ProfileImage.src}
             alt="Muhammad Waseem"
             width={500}
             height={500}
