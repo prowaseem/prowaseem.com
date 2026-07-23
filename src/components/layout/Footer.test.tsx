@@ -8,6 +8,7 @@ describe('Footer', () => {
     expect(screen.getByRole('link', { name: 'Email' })).toHaveAttribute('href', 'mailto:theprowaseem@gmail.com');
     expect(screen.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/prowaseem');
     expect(screen.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute('href', 'https://linkedin.com/in/prowaseem');
+    expect(screen.getByRole('link', { name: 'Website' })).toHaveAttribute('href', 'https://prowaseem.com');
   });
 
   it('renders a back-to-top button', () => {

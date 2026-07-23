@@ -1,4 +1,4 @@
-import { ArrowUp, Mail } from 'lucide-react';
+import { ArrowUp, Globe, Mail } from 'lucide-react';
 import { profile } from '../../data/profile';
 import { scrollToSection } from '../../lib/scrollTo';
 
@@ -32,7 +32,7 @@ function LinkedinIcon(props: { size?: number }) {
   );
 }
 
-const ICONS = { mail: Mail, github: GithubIcon, linkedin: LinkedinIcon } as const;
+const ICONS = { mail: Mail, github: GithubIcon, linkedin: LinkedinIcon, globe: Globe } as const;
 
 export function Footer() {
   const year = new Date().getFullYear();

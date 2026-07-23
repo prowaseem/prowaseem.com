@@ -9,5 +9,6 @@ export const profile: Profile = {
     { label: 'Email', value: 'theprowaseem@gmail.com', href: 'mailto:theprowaseem@gmail.com', icon: 'mail' },
     { label: 'GitHub', value: 'github.com/prowaseem', href: 'https://github.com/prowaseem', icon: 'github' },
     { label: 'LinkedIn', value: 'linkedin.com/in/prowaseem', href: 'https://linkedin.com/in/prowaseem', icon: 'linkedin' },
+    { label: 'Website', value: 'prowaseem.com', href: 'https://prowaseem.com', icon: 'globe' },
   ],
 };

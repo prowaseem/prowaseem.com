@@ -2,7 +2,7 @@ export interface ContactLink {
   label: string;
   value: string;
   href: string;
-  icon: 'mail' | 'github' | 'linkedin';
+  icon: 'mail' | 'github' | 'linkedin' | 'globe';
 }
 
 export interface Profile {
