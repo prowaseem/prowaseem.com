@@ -1,7 +1,8 @@
 import { vi } from 'vitest';
+import React from 'react';
 import '@testing-library/jest-dom/vitest';
 
-// Skip Framer Motion animations during tests for deterministic assertions
+// Skip Framer Motion animations during tests while preserving component props
 vi.mock('framer-motion', async () => {
   const actual = await vi.importActual('framer-motion');
   return {
@@ -10,8 +11,14 @@ vi.mock('framer-motion', async () => {
     motion: new Proxy(
       {},
       {
-        get: () => {
-          return ({ children }: any) => children;
+        get: (_target, prop) => {
+          return (props: any) => {
+            const { children, ...rest } = props;
+            const Component = prop as string;
+            if (Component === 'button') return React.createElement('button', rest, children);
+            if (Component === 'a') return React.createElement('a', rest, children);
+            return React.createElement('div', rest, children);
+          };
         },
       }
     ),
