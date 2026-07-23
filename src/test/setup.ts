@@ -1,4 +1,22 @@
+import { vi } from 'vitest';
 import '@testing-library/jest-dom/vitest';
+
+// Skip Framer Motion animations during tests for deterministic assertions
+vi.mock('framer-motion', async () => {
+  const actual = await vi.importActual('framer-motion');
+  return {
+    ...actual,
+    AnimatePresence: ({ children }: any) => children,
+    motion: new Proxy(
+      {},
+      {
+        get: () => {
+          return ({ children }: any) => children;
+        },
+      }
+    ),
+  };
+});
 
 if (!window.matchMedia) {
   Object.defineProperty(window, 'matchMedia', {
