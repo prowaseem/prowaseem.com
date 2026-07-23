@@ -1,5 +1,38 @@
+@import "tailwindcss";
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource-variable/sora";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  color-scheme: light dark;
+  --surface: #FFF9F5;
+  --surface-elevated: #FFFFFF;
+  --ink: #2A211C;
+  --border-subtle: #EAD9CD;
+}
+
+.dark {
+  --surface: #1C1512;
+  --surface-elevated: #241B16;
+  --ink: #FDF3EC;
+  --border-subtle: #3A2C24;
+}
+
+@theme {
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-ink: var(--ink);
+  --color-border-subtle: var(--border-subtle);
+
+  --color-coral-400: #FF8A7A;
+  --color-coral-500: #FF6B5D;
+  --color-coral-600: #E55346;
+  --color-amber-400: #FFB74D;
+  --color-amber-500: #FFA726;
+  --color-pink-400: #FF9EC4;
+
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
 * {
@@ -8,4 +41,17 @@
 
 body {
   margin: 0;
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
