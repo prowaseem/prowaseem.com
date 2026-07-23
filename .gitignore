@@ -47,6 +47,10 @@ typings/
 # TypeScript cache
 *.tsbuildinfo
 
+# TypeScript build output
+vite.config.js
+vite.config.d.ts
+
 # Optional npm cache directory
 .npm
 
