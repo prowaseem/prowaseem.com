@@ -5,11 +5,12 @@ interface ButtonProps {
   children: ReactNode;
   href?: string;
   onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
   variant?: 'primary' | 'secondary';
   className?: string;
 }
 
-export function Button({ children, href, onClick, variant = 'primary', className = '' }: ButtonProps) {
+export function Button({ children, href, onClick, type = 'button', variant = 'primary', className = '' }: ButtonProps) {
   const base =
     'inline-flex items-center justify-center rounded-2xl px-6 py-3 font-medium transition-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral-500';
   const styles =
@@ -32,7 +33,7 @@ export function Button({ children, href, onClick, variant = 'primary', className
 
   return (
     <motion.button
-      type="button"
+      type={type}
       onClick={onClick}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
