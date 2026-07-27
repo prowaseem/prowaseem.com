@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "deploy": "./scripts/deploy.sh",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"

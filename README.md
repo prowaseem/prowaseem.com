@@ -28,5 +28,13 @@ VITE_WEB3FORMS_ACCESS_KEY=your-access-key-here
 
 ## Deployment
 
-`npm run build` produces a self-contained `dist/` folder. Sync its contents to the
-S3 bucket backing prowaseem.com (outside the scope of this repo).
+`npm run build` produces a self-contained `dist/` folder. To publish the site to
+the S3 bucket backing prowaseem.com, run:
+
+```bash
+npm run deploy
+```
+
+This runs `scripts/deploy.sh`, which ensures the AWS SSO session is active, builds
+the site, clears the existing bucket contents, and uploads the `dist/` folder to
+`s3://prowaseem.com`. Requires the AWS CLI to be configured with access to the bucket.
